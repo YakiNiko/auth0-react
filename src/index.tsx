@@ -9,6 +9,7 @@ export {
   default as withAuthenticationRequired,
   WithAuthenticationRequiredOptions,
 } from './with-authentication-required';
+export { useRequiredAuthentication } from './use-required-authentication';
 export {
   default as Auth0Context,
   Auth0ContextInterface,

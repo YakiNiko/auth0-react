@@ -85,7 +85,9 @@ const withAuthenticationRequired = <P extends object>(
       returnTo = defaultReturnTo,
       onRedirecting = defaultOnRedirecting,
       loginOptions = {},
-      claimCheck = (): boolean => true,
+      claimCheck = function checkClaim(): boolean {
+        return true;
+      },
     } = options;
 
     /**
@@ -116,7 +118,13 @@ const withAuthenticationRequired = <P extends object>(
       returnTo,
     ]);
 
-    return routeIsAuthenticated ? <Component {...props} /> : onRedirecting();
+    console.warn('zbeub');
+
+    return routeIsAuthenticated && !isLoading ? (
+      <Component {...props} />
+    ) : (
+      onRedirecting()
+    );
   };
 };
 
