@@ -44,7 +44,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/auth0/auth0-react.git"
+    "url": "git@github.com:YakiNiko/auth0-react"
   },
   "license": "MIT",
   "bugs": {
